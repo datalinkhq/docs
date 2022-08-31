@@ -1,7 +1,7 @@
 {
-	"name": "@hopinc/docs",
+	"name": "@datalinkhq/docs",
 	"version": "1.0.0",
-	"repository": "https://github.com/hopinc/docs",
+	"repository": "https://github.com/datalinkhq/docs",
 	"author": "Hop <developers@hop.io>",
 	"license": "MIT",
 	"packageManager": "yarn@3.2.2",

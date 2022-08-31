@@ -2,16 +2,17 @@
 
 import urlcat from 'urlcat';
 import Image from 'next/image';
-import {HopLogo} from './assets/BrandVectors';
+import {DatalinkLogo} from './assets/BrandVectors';
+import React from 'react'
 
 /**
  * @type {import("./theme").DocsThemeConfig}
  */
 const config = {
-	projectLink: 'https://github.com/hopinc/docs',
-	docsRepositoryBase: 'https://github.com/hopinc/docs/tree/master/pages',
-	projectChatLink: 'https://discord.gg/hop',
-	titleSuffix: ' — Hop API',
+	projectLink: 'https://github.com/datalinkhq/docs',
+	docsRepositoryBase: 'https://github.com/datalinkhq/docs/tree/master/pages',
+	projectChatLink: 'https://discord.gg/wME4WyNGyV',
+	titleSuffix: ' — Datalink Docs',
 	search: true,
 	floatTOC: true,
 	footer: true,
@@ -20,25 +21,25 @@ const config = {
 	feedbackLabels: 'feedback',
 	feedbackLink: 'Feedback',
 	footerText: function FooterText() {
-		return <>{new Date().getFullYear()} © Hop, Inc.</>;
+		return <>{new Date().getFullYear()} © Datalink, Inc.</>;
 	},
 	footerEditLink: function FooterEditLink() {
 		return <>Edit this page</>;
 	},
 	logo: function Logo() {
-		return <HopLogo width={50} />;
-		// return <Image width={100} height={50} alt="Hop Logo" src="/hop.svg" />;
+		// return <DatalinkLogo width={50} />;
+		return <Image width={100} height={50} alt="Datalink Logo" src="/icons/logo.svg" />;
 	},
 	banner: function Banner() {
 		return (
 			<a
-				href="https://hop.io"
+				href="https://waitlist.datalink.dev"
 				target="_blank"
 				rel="noopener noreferrer"
 				className="font-medium text-current no-underline"
-				title="Go to the Hop beta announcement"
+				title="access datalink"
 			>
-				Hop is in private beta
+				Apply for early beta access
 			</a>
 		);
 	},
@@ -46,8 +47,8 @@ const config = {
 		const ogImage =
 			meta.image ||
 			urlcat('https://ogmeta.vercel.app/', {
-				title,
-				subtitle: meta.description ?? undefined,
+				title: 'The analytics platform for the future',
+				subtitle: 'Datalink - The analytics platform for the future' ?? undefined,
 				dark: 'true',
 			});
 
@@ -57,22 +58,21 @@ const config = {
 				<meta httpEquiv="Content-Language" content="en" />
 				<meta
 					name="description"
-					content={meta.description || 'Hop: The realtime engine'}
+					content={meta.description || 'Datalink - The analytics platform for the future'}
 				/>
 				<meta
 					name="og:description"
-					content={meta.description || 'Hop: The realtime engine'}
+					content={meta.description || 'Datalink - The analytics platform for the future'}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@hop" />
 				<meta name="twitter:image" content={ogImage} />
 				<meta
 					name="og:title"
-					content={title ? title + ' — Hop' : 'Hop: The realtime engine'}
+					content={title ? title + ' — Datalink' : 'Datalink - The analytics platform for the future'}
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Hop: the realtime engine" />
-				<meta name="og:title" content="Hop: the realtime engine" />{' '}
+				<meta name="description" content="Datalink - The analytics platform for the future" />
+				<meta name="og:title" content="Datalink - The analytics platform for the future" />{' '}
 				<meta name="og:image" content={ogImage} />
 				<style>
 					{`img[decoding] {

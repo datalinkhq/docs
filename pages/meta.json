@@ -1,7 +1,4 @@
 {
 	"index": "Introduction",
-	"sdks": "SDKs",
-	"ignite": "Ignite",
-	"channels": "Channels",
-	"pipe": "Pipe"
-}
+	"sdks": "SDKs"
+} 
