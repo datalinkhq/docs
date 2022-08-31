@@ -1,0 +1,39 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /events/publish
+
+Any custom events the developer wishes to add into their games.
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number
+    "token": "TOKEN", // String: sessionKey fetched from /auth
+    "DateISO": "2022-07-25T12:09:06Z", // ISO: Date & Time of the Event
+    "ServerID": "685566749516628033", // BigInt: ID of the server where the Event occurred
+    "Packet": {
+        "EventName": "Really Special Easter Egg" // String: Name of the Event
+    }
+}
+```
+</Code>
+
+### Response
+<Code>
+```json
+{
+    code: 200, // Number: IETF Status Code
+    status: "success", // String: Success
+    EventID: 1 // Number: ID of the Event created 
+}
+```
+</Code>
+

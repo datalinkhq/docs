@@ -1,4 +1,3 @@
 {
-	"client": "Client Side",
-	"server": "Server Side"
+	"server": "Server Module"
 }
