@@ -2,7 +2,6 @@
 	"name": "@datalinkhq/docs",
 	"version": "1.0.0",
 	"repository": "https://github.com/datalinkhq/docs",
-	"author": "Hop <developers@hop.io>",
 	"license": "MIT",
 	"packageManager": "yarn@3.2.2",
 	"scripts": {
