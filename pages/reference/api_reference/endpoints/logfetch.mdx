@@ -1,0 +1,52 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /logs/fetch
+
+Get logs from game (warns, errors, etc.)
+
+### Request Body
+
+1. Fetch a log by it's ID:
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "sessionKey", // String: sessionKey
+    "logid": 1 // Number: LogID
+}
+```
+</Code>
+
+2. Fetch all logs for game:
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "sessionKey" // String: sessionKey
+}
+```
+</Code>
+
+
+### Response
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "success", // String: Success
+    [
+        "id": 1, // Number: LogID
+        "type": "Error", // String: Type of log
+        "trace": "erroringFunction()", // String: Log Trace
+        "message": "Attempted to index nil" // String: ErrorMessage (if any)
+    ]
+}
+```
+</Code>
+

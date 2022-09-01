@@ -1,0 +1,34 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /auth
+
+Get a sessionKey to interact with the other endpoints. 
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number
+    "token": "TOKEN", // String: token provided when creating account in /create
+}
+```
+</Code>
+
+### Response
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "success", // String: Success
+    "token": "SESSION_TOKEN" // String: sessionKey
+}
+```
+</Code>
+

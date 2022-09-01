@@ -1,3 +1,7 @@
 {
-    "eventpublish": "/events/publish"
+    "create": "/create",
+    "auth": "/auth",
+    "eventpublish": "/events/publish",
+    "logpublish": "/logs/publish",
+    "logfetch": "/logs/fetch"
 }
