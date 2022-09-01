@@ -1,0 +1,44 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /heartbeat
+
+Checks if the current sessionKey is valid. 
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "session_key" // String: sessionKey provided from /auth
+}
+```
+</Code>
+
+### Response
+
+1. Valid: 
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "Session Key OK", // String: Success
+}
+```
+</Code>
+
+2. Invalid:
+<Code>
+```json
+{
+    "code": 401, // Number: IETF Status Code
+    "status": "Session Key Invalid", // String: Success
+}
+```
+</Code>

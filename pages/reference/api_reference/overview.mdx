@@ -14,33 +14,30 @@ Datalink has a REST API, which is used by the SDK. This documentation explains h
 
 Any custom events the developer wishes to add into their games.
 
-> /event/logs/error [POST-only]
+> /logs/publish [POST-only]
 
-In-game errors
+In-game logs (errors, warnings, etc.)
 
-> /event/logs/warns [POST-only]
-
-In-game warns
-
-> /event/logs/logs [POST-only]
-
-In-game logs
-
-> /event/player/session [POST-only]
+> /internal/playerLeft [POST-only]
 
 Any information the player does during the players session, for example the player could collect X coins in a session that lasted X time.
 
-> /event/player/joined [POST-only]
+> /interal/playerJoined [POST-only]
 
-When a player joins a game
+When a player joins a game.
 
-> /event/player/removed [POST-only]
+> /ff/set [POST-only]
 
-When a palyer gets removed from a game.
+Feature flag API to set a flag.
 
-> /flag/state [POST to set value, GET to get value]
+> /ff/fetch [GET-only]
 
-Feature flag API to get and set flags
+Feature flag API to fetch a flag or list of flags for a game.
+
+> /ff/update [POST-only]
+
+Feature flag API to update a flag.
+
 
 # Coming Soon
 > /event/player/progression [POST-only]

@@ -1,0 +1,34 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /destroy
+
+Destroy the current sessionKey. 
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number
+    "token": "TOKEN", // String: token provided when creating account in /create
+    "session_key": "session_key", // String: session key provided from /auth
+}
+```
+</Code>
+
+### Response
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "success", // String: Success
+}
+```
+</Code>
+

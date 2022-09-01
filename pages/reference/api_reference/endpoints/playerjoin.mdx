@@ -1,0 +1,41 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /internal/playerJoined
+
+Post player data on join.
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "session_key", // String: sessionKey provided from /auth
+    "accountId": "user_id", // String: PseudoID of the user's account
+    "acccountAge": 1 , // Number: Age of the account
+    "followedPlayer": true, // Boolean: Whether the user joined a player
+    "followedFriend": true, // Boolean: Whether the user joined a friend
+    "premium": false, // Boolean: Whether the user has a premium account
+    "locale": "en-GB", // String: Locale of the user
+    "region": "GB", // String: Region of the user
+}
+```
+</Code>
+
+### Response
+ 
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "Session Key OK", // String: Success
+    "playerId": "user_id", // String: PseudoID of the user's account
+}
+```
+</Code>

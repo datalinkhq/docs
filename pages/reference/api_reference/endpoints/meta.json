@@ -1,7 +1,14 @@
 {
     "create": "/create",
     "auth": "/auth",
+    "destroy": "/destroy",
+    "heartbeat": "/heartbeat",
     "eventpublish": "/events/publish",
     "logpublish": "/logs/publish",
-    "logfetch": "/logs/fetch"
+    "logfetch": "/logs/fetch",
+    "playerjoin": "/internal/playerJoined",
+    "playerleft": "/internal/playerLeft",
+    "ff-set": "/ff/set",
+    "ff-fetch": "/ff/fetch",
+    "ff-update": "/ff/update"
 }

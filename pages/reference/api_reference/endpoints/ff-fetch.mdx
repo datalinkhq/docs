@@ -1,0 +1,63 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /ff/fetch
+
+Get fast flags for the game.
+
+### Request Body
+
+1. Fetch a flag by its ID:
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "sessionKey", // String: sessionKey
+    "flagid": 1 // Number: flagID
+}
+```
+</Code>
+
+2. Fetch a flag by its name:
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "sessionKey", // String: sessionKey
+    "name": "Really Cool Rainbow", // String: Name of the flag
+}
+```
+</Code>
+
+3. Fetch all flags for game:
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "sessionKey" // String: sessionKey
+}
+```
+</Code>
+
+
+### Response
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "success", // String: Success
+    [
+        "id": 1, // Number: flagID
+        "flagId": 1, // String: ID of flag
+        "FeatureName": "Really Cool Rainbow", // String: Feature Name
+        "FeatureValue": 0.5 // Number: Float between 0 and 1 for the percentage of servers
+    ]
+}
+```
+</Code>
+

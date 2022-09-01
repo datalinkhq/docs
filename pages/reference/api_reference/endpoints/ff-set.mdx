@@ -1,0 +1,36 @@
+---
+title: API Reference
+description: Learn how to get started with Datalink's API
+---
+
+import {Code} from '../../../../components/code';
+import Link from 'next/link';
+
+# /ff/set
+
+Set the value of a fast flag.
+
+### Request Body
+
+<Code>
+```json
+{
+    "id": 1, // Number: UserID
+    "token": "session_key", // String: sessionKey provided from /auth
+    "name": "Really Cool Rainbow", // String: name of the fast flag
+    "value": 0.5, // Number: Float between 0 and 1 for the percentage of servers
+}
+```
+</Code>
+
+### Response
+ 
+<Code>
+```json
+{
+    "code": 200, // Number: IETF Status Code
+    "status": "Session Key OK", // String: Success
+    "flagId": 1, // Number: ID of the flag
+}
+```
+</Code>
