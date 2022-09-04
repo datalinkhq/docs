@@ -65,7 +65,7 @@ const config = {
 					content={meta.description || 'Datalink - The analytics platform for the future'}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:image" content={ogImage} />
+				<meta name="twitter:image" content={"https://media.discordapp.net/attachments/1011641273393885239/1016003920155398226/Bannerwide-2.png?width=1440&height=480"} />
 				<meta
 					name="og:title"
 					content={title ? title + ' — Datalink' : 'Datalink - The analytics platform for the future'}
@@ -73,7 +73,7 @@ const config = {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="description" content="Datalink - The analytics platform for the future" />
 				<meta name="og:title" content="Datalink - The analytics platform for the future" />{' '}
-				<meta name="og:image" content={ogImage} />
+				<meta name="og:image" content={"https://media.discordapp.net/attachments/1011641273393885239/1016003920155398226/Bannerwide-2.png?width=1440&height=480"} />
 				<style>
 					{`img[decoding] {
 						border-radius: 0.75rem;
