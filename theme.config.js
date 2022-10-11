@@ -10,7 +10,7 @@ import React from 'react'
  */
 const config = {
 	projectLink: 'https://github.com/datalinkhq/docs',
-	docsRepositoryBase: 'https://github.com/datalinkhq/docs/tree/master/pages',
+	docsRepositoryBase: 'https://github.com/datalinkhq/docs/tree/main/pages',
 	projectChatLink: 'https://discord.gg/wME4WyNGyV',
 	titleSuffix: ' — Datalink Docs',
 	search: true,
