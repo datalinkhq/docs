@@ -1,0 +1,72 @@
+---
+title: Server-side Lua SDK
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../components/code';
+
+# Get Started
+To begin your Datalink reporting journey, the Lua SDK needs to be installed and configured. 
+
+# Installation
+To install the Datalink SDK, you can either use a prebuilt binary, or compile your own.
+
+## Using a prebuilt release
+Grab the latest version of the SDK from the [Github Releases](https://github.com/datalinkhq/rbx-datalink/releases/) and drag it into your Studio's ServerStorage. 
+
+## Compiling the source code
+If you would like to compile the SDK yourself, you would require the following software:
+- [Git](https://git-scm.com/)
+- [Rojo](https://rojo.space/)
+- [Node.JS](https://nodejs.org/) (Optional, only for roblox-ts support) 
+- [Yarn/PNPM/NPM](https://pnpm.io) (Optional, only for roblox-ts support) 
+
+
+### Lua SDK
+1. Clone the repo from GitHub using git:
+<Code>
+```bash
+git clone https://github.com/datalinkhq/rbx-datalink.git
+```
+</Code>
+
+2. Build the RBXM binary using rojo:
+<Code>
+```bash
+rojo build -o sdk.rbxm
+```
+</Code>
+
+3. Add the SDK to the ServerStorage. You're good to go!
+
+### Roblox-TS SDK
+
+1. Clone the repo from GitHub using git:
+<Code>
+```bash
+git clone https://github.com/datalinkhq/rbx-datalink.git
+```
+</Code>
+
+2. Install Node.JS dependencies:
+<Code>
+```bash
+pnpm i
+```
+</Code>
+
+3. Compile the TypeScript code the roblox-ts compiler:
+<Code>
+```bash
+pnpm run build
+```
+</Code>
+
+4. Build the compiled TypeScript code using rojo:
+<Code>
+```bash
+cd out && rojo build -o sdk.rbxm
+```
+</Code>
+
+5. Add the SDK to the ServerStorage. You're good to go!
