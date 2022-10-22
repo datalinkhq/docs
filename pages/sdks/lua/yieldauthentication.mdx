@@ -1,0 +1,23 @@
+---
+title: Waiting for Authentication
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../../components/code';
+
+# Yield until Authenticated
+
+To wait for the Datalink SDK to be authenticated before accessing functionality in other scripts `YieldUntilDataLinkIsAuthenticated()` can be used. However, it is not mandatory as most Datalink functionalities already yield until the module is authenticated.
+
+<Code>
+```lua
+local ServerStorage = game:GetService("ServerStorage")
+
+local DatalinkService = require(ServerStorage.DatalinkService)
+
+DatalinkService:YieldUntilDataLinkIsAuthenticate()
+
+-- Once authenticated, access other functions.
+
+```
+</Code>

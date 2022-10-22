@@ -1,0 +1,34 @@
+---
+title: Fire a Log Event
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../../components/code';
+
+# FireLogEvent
+
+Datalink can keep track of errors in your codebase similar to products such as [Sentry](https://sentry.io). This way, you can monitor and patch critical bugs and improve the mobility of your game.
+
+<Code>
+```lua
+local ServerStorage = game:GetService("ServerStorage")
+
+local DatalinkService = require(ServerStorage.DatalinkService)
+
+xpcall(
+    function()
+        InitializeGame()
+    end,
+    function(err)
+        DatalinkService:FireLogEvent(
+            Enum.AnalyticsLogLevel[4],
+            err,
+            {
+                details = "Game initialization failed!"
+            }
+        )
+    end
+)
+
+```
+</Code>

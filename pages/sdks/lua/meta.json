@@ -1,0 +1,6 @@
+{
+    "authenticate": "Authenticate",
+    "firecustomevent": "FireCustomEvent",
+    "yieldauthentication": "Wait for Authentication",
+    "firelogevent": "FireLogEvent"
+}
