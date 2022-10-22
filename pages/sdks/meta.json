@@ -1,4 +1,5 @@
 {
-	"server": "Server Module",
+	"lua": "Lua Module",
+	"ts": "TypeScript SDK",
 	"installation": "SDK Compilation & Installation"
 }
