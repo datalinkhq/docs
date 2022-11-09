@@ -1,0 +1,22 @@
+---
+title: Get a Fast Int
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../../components/code';
+
+# GetFastInt
+
+Datalink can manage feature rollouts through the Fast Flags feature. Fast Flags are percentage values indicating the amount of servers/users the feature should roll out to.  
+
+<Code>
+```lua
+local ServerStorage = game:GetService("ServerStorage")
+
+local DatalinkService = require(ServerStorage.DatalinkService)
+
+DatalinkService:GetFastInt(featureName: string, default: number)
+-- default is the value to be returned in case the data fetching fails
+
+```
+</Code>

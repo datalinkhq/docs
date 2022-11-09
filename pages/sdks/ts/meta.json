@@ -1,6 +1,8 @@
 {
     "authenticate": "Authenticate",
     "firecustomevent": "FireCustomEvent",
+    "yieldauthentication": "Wait for Authentication",
     "firelogevent": "FireLogEvent",
-    "yieldauthentication": "Wait for Authentication"
+    "getfastint": "GetFastInt",
+    "getfastflag": "GetFastFlag"
 }
