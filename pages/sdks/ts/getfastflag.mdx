@@ -11,9 +11,9 @@ Datalink can manage feature rollouts through the Fast Flags feature. Fast Flags 
 
 <Code>
 ```lua
-impoty { GetFastFlag as IsEnabled } from '@datalinkhq/rbx-datalink'
+impoty { GetFastFlag as IsFeatureEnabled } from '@datalinkhq/rbx-datalink'
 
-if (DataLink.IsEnabled("SuperCoolRain")) {
+if (DataLink.IsFeatureEnabled("SuperCoolRain")) {
     StartRain()
 }
 ```
