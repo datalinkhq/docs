@@ -4,55 +4,11 @@ description: Learn how to get started with Datalink's API
 ---
 
 import {Code} from '../../../components/code';
+import Callout from 'nextra-theme-docs/callout';
 import Link from 'next/link';
 
-Datalink has a REST API, which is used by the SDK. This documentation explains how to use them. 
+# Overview
+A documented page on the REST API interface datalink has to offer
 
-# Available Endpoints
-
-> /event/publish [POST-only]
-
-Any custom events the developer wishes to add into their games.
-
-> /logs/publish [POST-only]
-
-In-game logs (errors, warnings, etc.)
-
-> /internal/playerLeft [POST-only]
-
-Any information the player does during the players session, for example the player could collect X coins in a session that lasted X time.
-
-> /interal/playerJoined [POST-only]
-
-When a player joins a game.
-
-> /ff/set [POST-only]
-
-Feature flag API to set a flag.
-
-> /ff/fetch [GET-only]
-
-Feature flag API to fetch a flag or list of flags for a game.
-
-> /ff/update [POST-only]
-
-Feature flag API to update a flag.
-
-
-# Coming Soon
-> /event/player/progression [POST-only]
-
-Any progression the player makes, this could be with levels, pets, experience etc.
-
-> /event/player/robux [POST-only]
-
-Any actions that a player makes to do with robux, for example purchasing in-game products.
-
-> /event/player/device [POST-only]
-
-The specifics of the players device
-
-> /event/economy [POST-only]
-
-Economy level events, for instance if a player purchases 1M in-game currency and then gives it out to players.
-
+## LuaU SDK
+Unless you know what you're doing, it's suggested you use the LuaU SDK we offer.

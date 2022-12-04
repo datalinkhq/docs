@@ -1,6 +1,6 @@
 ---
-title: API Reference
-description: Learn how to get started with Datalink's API
+title: Authenticate
+description: DataLink Authentication
 ---
 
 import {Code} from '../../../../components/code';
@@ -8,15 +8,15 @@ import Link from 'next/link';
 
 # /auth
 
-Get a sessionKey to interact with the other endpoints. 
+Authenticate a game-session with a DataLink Account Token, the authentication endpoint should be called once to initiate a session.
 
 ### Request Body
 
 <Code>
 ```json
 {
-    "id": 1, // Number
-    "token": "TOKEN", // String: token provided when creating account in /create
+    "id": 1, // Datalink User ID: Number
+    "token": "TOKEN", // Datalink Token: String
 }
 ```
 </Code>
@@ -25,10 +25,11 @@ Get a sessionKey to interact with the other endpoints.
 <Code>
 ```json
 {
-    "code": 200, // Number: IETF Status Code
-    "status": "success", // String: Success
-    "token": "SESSION_TOKEN" // String: sessionKey
+    "code": 200, // IETF Status Code: Number
+    "status": "success", // Request Status: String
+    "token": "SESSION_TOKEN" // Datalink Session Token: String
 }
 ```
 </Code>
 
+Once the Session Token is retrieved, this will be the token used to enable access to the majroity of DataLink RESTFul APIs
