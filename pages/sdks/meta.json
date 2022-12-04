@@ -1,5 +1,4 @@
 {
-	"lua": "Lua Module",
-	"ts": "TypeScript SDK",
-	"installation": "SDK Compilation & Installation"
+	"overview": "Overview",
+	"sdk": "Datalink SDK"
 }

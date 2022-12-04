@@ -1,0 +1,37 @@
+---
+title: Authenticating using the Server Side SDK
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../../components/code';
+import Callout from 'nextra-theme-docs/callout';
+
+# Constructor
+Before you can use the Datalink SDK, you need to create the datalink instance which should be your primary point of contact for interacting with the Datalink Service
+
+<Code>
+```lua
+local DatalinkModule = require(Path.To.Module)
+local Datalink = DatalinkModule.new({
+	datalinkUserAccountId = 0,
+	datalinkUserToken = ""
+})
+
+--[[
+Datalink.onAuthenticated:Once(function()
+	print'Datalink Authenticated!'
+end)
+--]]
+
+```
+```typescript
+
+```
+</Code>
+
+<Callout type="error" emoji="">
+  Please ensure that the following are **NOT** exposed to the client;
+
+  - Authentication Key
+    - This key would allow an attacker **FULL ACCESS** to your experiences data
+</Callout>

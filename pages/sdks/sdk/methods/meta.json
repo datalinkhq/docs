@@ -1,0 +1,7 @@
+{
+    "isAuthenticated": ":isAuthenticated",
+    "authenticateAsync": ":authenticateAsync",
+    "getFastFlagAsync": ":getFastFlagAsync",
+    "getFastIntAsync": ":getFastIntAsync",
+    "invokeEventAsync": ":invokeEventAsync"
+}

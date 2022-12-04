@@ -1,29 +1,44 @@
 ---
-title: Datalink - Introduction
-description: Install your Datalink SDK
+title: Introduction
+description: Datalink Introduction
 ---
 
 import {Code} from '../components/code';
 import Link from 'next/link';
 
 # Datalink
-Datalink was built to provide a interface to analyze anonymous game analytics collected through Roblox experiences.
+Datalink is a tool that helps to provide Roblox Developers with critical & detailed analysis surrounding both Player & Game state & data in a Roblox Experience
 
 ## Product Summary
-Datalink is a series of applications which provide critical information regarding the state, health and mobility of your Roblox experiences.
+Datalink should provide a suite of interfaces which help to destinguish and expose information regarding state, health, mobility, player data + more; 
 
-Unlike traditional game analytics Datalink strives to provide feedback on not just your player base, game economics and so forth, but also integrates the usage of other services to make your life as a developer easier.
+- Game/Experience State
+	- State is defined by the contextual agreement surrounding a servers ability to perform, allow users to join, remove and update datastores. 
+	- For example, The State field could include;
+		- Servers Per `Hour`, `Day`, `Month`, `Annum`
+<br> </br>
+- Game/Experience Health
+	- Health is defined by how much CPU, Memory, Processing Time is being taken up by the server.
+	- Additionally, we can look further and provide feedback regarding player crashing rates, reproduction steps on how these players might of crashed and potential fixes if any are obvious
+<br> </br>
+- Data
+	- Data includes all kinds of information regading the places inside of your Roblox Experience
+	- Custom Developer Events will also be counted under this field, as we are unable to process specifics in your events.
+<br> </br>
+- So, so much more!
+	- We're still yet and looking into providing so much more which'll help improve the scalability of your experience!
+	- Some examples of what we're planning to Ship Datalink with are;
+		- Fast/Feature Flags
+		- DataStore, MemoryStore & MessagingService wrappers
+		- Game Event Controllers
+		- Live information flow
 
-At Datalink, we are planning to support the following;
-- Live Experience Information & Trackers
-- Support for Roblox Fast/Feature Flags
-- DataStore & MemoryStore Explorer
-- MessagingService Controller & Manipulator
+With the above in mind, we would also love to hear your feedback and what you have to say!
 
 ## Getting Started
-> Lua SDK
+> LuaU Software Development Kit (SDK)
 
-The [Lua SDK](https://docs.datalink.dev/sdks/installation) is a Datalink RESTful API wrapper, the Lua SDK provides a minimal & efficient way to interface with the Datalink Service. 
+The [LuaU SDK](https://docs.datalink.dev/sdks/installation) is designed to simplify the process of uploading & manipulating the Datalink service, it's advised you stick with using this service
 
 > RESTful APIs
 
