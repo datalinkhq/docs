@@ -1,0 +1,98 @@
+---
+title: Server-side Lua SDK
+description: Guide to using Datalink's server-side Lua SDK
+---
+
+import {Code} from '../../components/code';
+import Callout from 'nextra-theme-docs/callout';
+
+# Overview
+A documented page on the installation & setup need to get Datalink up & running.
+
+## Get Started
+To begin on your Datalink adventure, we need to account for the following;
+
+- You have a registered Datalink Account & Experience
+- You have the Datalink LuaU SDK installed & setup in your Experience
+
+## Installation
+> Prebuilt Datalink Binary
+
+Grab the latest version of the SDK from the [Github Releases](https://github.com/datalinkhq/rbx-datalink/releases/) and import the binary into your Roblox Studio
+
+> Compilation of Datalink Binary
+
+Datalink can be compiled from it's source, however this may also yield errors/changes which have not yet been accounted for.
+
+<Code>
+```bash
+# Clone the RBX-Datalink Repository
+git clone https://github.com/datalinkhq/rbx-datalink.git
+
+# Move your active directory into the cloned datalink folder
+cd rbx-datalink
+
+# Use rojo to compile the Datalink Binary
+rojo build -o sdk.rbxm
+
+# You can then import this Datalink Binary into your game.
+```
+</Code>
+
+For our beloved TypeScript developers;
+
+<Code>
+```bash
+# We use pnpm in this example, but the same can be applied to your package manager.
+# Clone the RBX-Datalink Repository
+git clone https://github.com/datalinkhq/rbx-datalink.git
+
+# Move your active directory into the cloned datalink folder
+cd rbx-datalink
+
+# Install Node.JS dependencies
+pnpm i
+
+# Compile the TypeScript code the roblox-ts compiler
+pnpm run build
+
+# Build the compiled TypeScript code using rojo:
+rojo build -o sdk.rbxm
+
+# You can then import this Datalink Binary into your game.
+```
+</Code>
+
+--------------------------
+
+> Wally (or a TypeScript) Package Manager
+
+Datalink can be installed using [wally](https://wally.run), a modern, cargo-style package manager for ROBLOX. 
+That said, we also support NPM, PNPM & Yarm for those who use TypeScript in their projects.
+
+<Code>
+```toml
+# The following entry can be added to your Wally TOML 
+# to install Datalink into your LuaU Project
+
+rbx-datalink = "datalinkhq/rbx-datalink@2.0.1"
+```
+
+```bash
+# The following commands can be executed to install
+# Datalink into your TypeScript project
+
+# NPM
+npm i @datalinkhq/rbx-datalink
+
+# PNPM
+pnpm i @datalinkhq/rbx-datalink
+
+# Yarn
+yarn add @datalinkhq/rbx-datalink
+```
+</Code>
+
+<Callout emoji="💡">
+	The LuaU files can still be called from TypeScript when installed using Wally
+</Callout>
