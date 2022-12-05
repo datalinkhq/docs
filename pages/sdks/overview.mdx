@@ -32,6 +32,9 @@ git clone https://github.com/datalinkhq/rbx-datalink.git
 # Move your active directory into the cloned datalink folder
 cd rbx-datalink
 
+# Remove unneeded TypeScript declaration files
+rm -rf src/index.d.ts
+	
 # Use rojo to compile the Datalink Binary
 rojo build -o sdk.rbxm
 
