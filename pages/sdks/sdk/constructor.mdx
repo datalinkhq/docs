@@ -19,7 +19,7 @@ local Datalink = DatalinkModule.new({
 
 --[[
 Datalink.onAuthenticated:Once(function()
-	print'Datalink Authenticated!'
+	print('Datalink Authenticated!')
 end)
 --]]
 
@@ -31,6 +31,10 @@ const Datalink = new DatalinkModule({
 	datalinkUserAccountId = 0,
 	datalinkUserToken = ""
 })
+
+// Datalink.onAuthenticated.Once(() => {
+//    print('Datalink Authenticated!')
+// })
 
 ```
 </Code>
