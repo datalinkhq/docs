@@ -7,7 +7,7 @@ import {Code} from '../../../components/code';
 import Callout from 'nextra-theme-docs/callout';
 
 # Constructor
-Before you can use the Datalink SDK, you need to create the datalink instance which should be your primary point of contact for interacting with the Datalink Service
+Before you can use the Datalink SDK, you need to create the datalink instance which should be your primary point of contact for interacting with the Datalink Service.
 
 <Code>
 ```lua
@@ -25,6 +25,12 @@ end)
 
 ```
 ```typescript
+import DatalinkModule from "@datalinkhq/rbx-datalink"
+
+const Datalink = new DatalinkModule({
+	datalinkUserAccountId = 0,
+	datalinkUserToken = ""
+})
 
 ```
 </Code>
