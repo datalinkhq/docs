@@ -21,7 +21,7 @@ const config = {
 	feedbackLabels: 'feedback',
 	feedbackLink: 'Feedback',
 	footerText: function FooterText() {
-		return <>{new Date().getFullYear()} © Datalink, Inc.</>;
+		return <>{new Date().getFullYear()} © Datalink.</>;
 	},
 	footerEditLink: function FooterEditLink() {
 		return <>Edit this page</>;
