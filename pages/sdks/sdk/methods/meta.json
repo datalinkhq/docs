@@ -1,7 +1,14 @@
 {
     "isAuthenticated": ":isAuthenticated",
     "authenticateAsync": ":authenticateAsync",
-    "getFastFlagAsync": ":getFastFlagAsync",
+    "fireCustomEvent": ":fireCustomEvent",
+    "fireEconomyEvent": ":fireEconomyEvent",
+    "fireProgressionEvent": ":fireProgressionEvent",
     "getFastIntAsync": ":getFastIntAsync",
-    "invokeEventAsync": ":invokeEventAsync"
+    "getFastFlagAsync": ":getFastFlagAsync",
+    "getAllFastFlagsAsync": ":getAllFastFlagsAsync",
+    "setVerboseLogging": ":setVerboseLogging",
+    "setLocalVariable": ":setLocalVariable",
+    "getLocalVariable": ":getLocalVariable",
+    "getLocalVariables": ":getLocalVariables"
 }

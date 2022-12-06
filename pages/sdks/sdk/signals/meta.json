@@ -1,3 +1,8 @@
 {
-    "onAuthenticated": ".onAuthenticated"
+    "onAuthenticated": ".onAuthenticated",
+    "onDaemonStarted": ".onDaemonStarted",
+    "onDaemonStopped": ".onDaemonStopped",
+    "onMessageRequestFail": ".onMessageRequestFail",
+    "onMessageRequestSent": ".onMessageRequestSent",
+    "onThrottled": ".onThrottled"
 }
