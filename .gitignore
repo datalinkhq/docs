@@ -5,3 +5,4 @@
 !.yarn/sdks
 node_modules
 .next
+.env
