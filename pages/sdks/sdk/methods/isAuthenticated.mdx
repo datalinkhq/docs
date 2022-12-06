@@ -8,8 +8,24 @@ import Callout from 'nextra-theme-docs/callout';
 
 # isAuthenticated
 
+Primary resource for acknowledging if the SDK is or is not authenticated
+
 <Code>
 ```lua
+local DatalinkSDK = require(Path.To.DatalinkSDK)
+local DatalinkInstance = DatalinkSDK.new({
+	datalinkUserAccountId = YOUR_ACCOUNT_ID,
+	datalinkUserToken = YOUR_ACCOUNT_TOKEN
+})
+
+local isDatalinkAuthenticated = DatalinkInstance:isAuthenticated()
+
+if not isDatalinkAuthenticated then
+	...
+end
+```
+```typescript
+
 
 ```
 </Code>
