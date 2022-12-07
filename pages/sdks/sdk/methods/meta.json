@@ -10,5 +10,6 @@
     "setVerboseLogging": ":setVerboseLogging",
     "setLocalVariable": ":setLocalVariable",
     "getLocalVariable": ":getLocalVariable",
-    "getLocalVariables": ":getLocalVariables"
+    "getLocalVariables": ":getLocalVariables",
+    "getPlayerHash": ":getPlayerHash"
 }
