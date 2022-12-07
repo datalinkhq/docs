@@ -1,6 +1,6 @@
 ---
-title: Authenticating using the Server Side SDK
-description: Guide to using Datalink's server-side Lua SDK
+title: FireCustomEvent - Method
+description: Invoke a custom datalink event over to the dashboard!
 ---
 
 import {Code} from '../../../../components/code';
@@ -8,7 +8,7 @@ import Callout from 'nextra-theme-docs/callout';
 
 # fireCustomEvent
 
-This method is used to invoke a custom developer event, a custom event allows the developer to send whatever information they would like to send over to the Datalink Service
+This method is used to invoke a custom developer event, a custom event allows the developer to send whatever information they would like to send over to the Datalink Service.
 
 ## Parameters
 
@@ -18,7 +18,7 @@ The `eventName` parameter should be used to define the name of the custom event 
 
 #### eventParameters: Dictionary ( [string]: [datatype](https://www.tutorialspoint.com/lua/lua_data_types.htm) )
 
-The `eventParameters` parameter should be defined as a dictionary which contains the parameters the developer would like to attach to the custom event
+The `eventParameters` parameter should be defined as a dictionary which contains the parameters the developer would like to attach to the custom event.
 
 ## Example
 
@@ -45,5 +45,5 @@ end)
 </Code>
 
 <Callout type="warning" emoji="">
-  The above sample is an **EXAMPLE** of what you are able to do, a players expereince is one of many things you're able to send over to the dashboard
+	The above is just an **EXAMPLE** of what you're enabled to do with Datalink - you're able to send a lot more than just player information into the dashboard!
 </Callout>
