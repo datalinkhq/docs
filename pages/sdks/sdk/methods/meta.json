@@ -7,6 +7,8 @@
     "getFastIntAsync": ":getFastIntAsync",
     "getFastFlagAsync": ":getFastFlagAsync",
     "getAllFastFlagsAsync": ":getAllFastFlagsAsync",
+    "getAllGameLogsAsync": ":getAllGameLogsAsync",
+    "getGameLogAsync": ":getGameLogAsync",
     "setVerboseLogging": ":setVerboseLogging",
     "setLocalVariable": ":setLocalVariable",
     "getLocalVariable": ":getLocalVariable",

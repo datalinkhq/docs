@@ -1,0 +1,47 @@
+---
+title: getGameLogAsync - Method
+description: Get a game log relative to the current place.
+---
+
+import {Code} from '../../../../components/code';
+import Callout from 'nextra-theme-docs/callout';
+
+# getGameLogAsync
+
+This method is used to retrieve a specific game log for this expereince under the Datalink Service.
+
+## Parameters
+
+#### logId: Number
+
+The `logId` parameter should be used to get details on a specific log object.
+
+## Example
+
+<Code>
+```lua
+local DatalinkSDK = require(Path.To.DatalinkSDK)
+local DatalinkInstance = DatalinkSDK.new({
+	datalinkUserAccountId = YOUR_ACCOUNT_ID,
+	datalinkUserToken = YOUR_ACCOUNT_TOKEN
+})
+
+DatalinkInstance:authenticateAsync():andThen(function()
+	DatalinkInstance:getGameLogAsync(422):andThen(function(gameLogObject)
+		print(gameLogObject) --[[{
+			["id"] = 422,
+			["type"] = "Error",
+			["trace"] = "erroringFunction()",
+			["message"] = "Attempted to index nil"
+		}]]--
+	end)
+end)
+```
+```typescript
+
+```
+</Code>
+
+<Callout type="none" emoji="">
+	An example of why you might want to use this functionality, this feature enables a developer to display logs & errors on a dashboard in-game.
+</Callout>

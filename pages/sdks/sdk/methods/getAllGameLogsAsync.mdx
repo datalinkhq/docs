@@ -1,0 +1,41 @@
+---
+title: GetAllGameLogsAsync - Method
+description: Get all game logs relative to the current place.
+---
+
+import {Code} from '../../../../components/code';
+import Callout from 'nextra-theme-docs/callout';
+
+# getAllGameLogsAsync
+
+This method is used to retrieve all game logs for this expereince under the Datalink Service
+
+## Example
+
+<Code>
+```lua
+local DatalinkSDK = require(Path.To.DatalinkSDK)
+local DatalinkInstance = DatalinkSDK.new({
+	datalinkUserAccountId = YOUR_ACCOUNT_ID,
+	datalinkUserToken = YOUR_ACCOUNT_TOKEN
+})
+
+DatalinkInstance:authenticateAsync():andThen(function()
+	DatalinkInstance:getAllGameLogsAsync():andThen(function(gameLogs)
+		if not gameLogs[1] then
+			return
+		end
+
+		print(gameLogs[1]) --[[{
+			["id"] = 1,
+			["type"] = "Error",
+			["trace"] = "erroringFunction()",
+			["message"] = "Attempted to index nil"
+		}]]--
+	end)
+end)
+```
+```typescript
+
+```
+</Code>
