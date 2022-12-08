@@ -1,0 +1,49 @@
+---
+title: FireCustomEvent - Method
+description: Invoke a custom datalink event over to the dashboard!
+---
+
+import {Code} from '../../../../components/code';
+import Callout from 'nextra-theme-docs/callout';
+
+# fireCustomEvent
+
+This method is used to invoke a custom developer event, a custom event allows the developer to send whatever information they would like to send over to the Datalink Service.
+
+## Parameters
+
+#### eventName: String
+
+The `eventName` parameter should be used to define the name of the custom event the developer would like to invoke. 
+
+#### eventParameters: Dictionary ( [string]: [datatype](https://www.tutorialspoint.com/lua/lua_data_types.htm) )
+
+The `eventParameters` parameter should be defined as a dictionary which contains the parameters the developer would like to attach to the custom event.
+
+## Example
+
+<Code>
+```lua
+local DatalinkSDK = require(Path.To.DatalinkSDK)
+local DatalinkInstance = DatalinkSDK.new({
+	datalinkUserAccountId = YOUR_ACCOUNT_ID,
+	datalinkUserToken = YOUR_ACCOUNT_TOKEN
+})
+
+DatalinkInstance:authenticateAsync():andThen(function()
+	DatalinkInstance:fireCustomEvent(
+		"MyEventName", {
+			["MyEventParameter"] = "PlayerExperience",
+			["MyEventValue"] = Player.Experience
+		}
+	)
+end)
+```
+```typescript
+
+```
+</Code>
+
+<Callout type="warning" emoji="">
+	The above is just an **EXAMPLE** of what you're enabled to do with Datalink - you're able to send a lot more than just player information into the dashboard!
+</Callout>

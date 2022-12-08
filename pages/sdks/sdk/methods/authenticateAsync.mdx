@@ -1,6 +1,6 @@
 ---
-title: Authenticating using the Server Side SDK
-description: Guide to using Datalink's server-side Lua SDK
+title: Authentication
+description: Datalink Authentication
 ---
 
 import {Code} from '../../../../components/code';
@@ -8,8 +8,21 @@ import Callout from 'nextra-theme-docs/callout';
 
 # authenticateAsync
 
+Primary resource used in authenticating the SDK
+
 <Code>
 ```lua
+local DatalinkSDK = require(Path.To.DatalinkSDK)
+local DatalinkInstance = DatalinkSDK.new({
+	datalinkUserAccountId = YOUR_ACCOUNT_ID,
+	datalinkUserToken = YOUR_ACCOUNT_TOKEN
+})
+
+DatalinkInstance:authenticateAsync():andThen(function()
+	print('Hello from Datalink!')
+end)
+```
+```typescript
 
 ```
 </Code>
