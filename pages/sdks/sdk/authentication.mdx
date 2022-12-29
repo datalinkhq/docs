@@ -38,9 +38,11 @@ Datalink.authenticateAsync().then(() => {
 ```
 </Code>
 
-<Callout type="error" emoji="⚠️">
-  Please ensure that the following are **NOT** exposed to the client:
 
-  - Authentication Key
-    - This key would allow an attacker **FULL ACCESS** to your experiences data
+<Callout type="error" emoji="⚠️">
+  Please ensure that the Authentication Key is **NOT** exposed to the client as this would provide an attacker **full, unrestricted** access to your experience's data.
+</Callout>
+
+<Callout emoji="💡">
+  A recommended method to safeguard your API Key is to store it in a private and secure `DataStore`.
 </Callout>
