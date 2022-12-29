@@ -19,17 +19,27 @@ local Datalink = DatalinkModule.new({
 })
 
 Datalink:authenticateAsync():andThen(function()
-  print'Datalink Authenticated!'
+  print('Datalink Authenticated!')
 end):catch(warn)
 
 ```
 ```typescript
+import DatalinkModule from "@datalinkhq/rbx-datalink"
+
+const Datalink = new DatalinkModule({
+	datalinkUserAccountId = 0,
+	datalinkUserToken = ""
+})
+
+Datalink.authenticateAsync().then(() => {
+  print('Datalink Authenticated!')
+}).catch(console.warn)
 
 ```
 </Code>
 
 
-<Callout type="error" emoji="">
+<Callout type="error" emoji="⚠️">
   Please ensure that the Authentication Key is **NOT** exposed to the client as this would provide an attacker **full, unrestricted** access to your experience's data.
 </Callout>
 

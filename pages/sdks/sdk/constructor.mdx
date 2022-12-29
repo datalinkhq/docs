@@ -7,7 +7,7 @@ import {Code} from '../../../components/code';
 import Callout from 'nextra-theme-docs/callout';
 
 # Constructor
-Before you can use the Datalink SDK, you need to create the datalink instance which should be your primary point of contact for interacting with the Datalink Service
+Before you can use the Datalink SDK, you need to create the datalink instance which should be your primary point of contact for interacting with the Datalink Service.
 
 <Code>
 ```lua
@@ -19,18 +19,28 @@ local Datalink = DatalinkModule.new({
 
 --[[
 Datalink.onAuthenticated:Once(function()
-	print'Datalink Authenticated!'
+	print('Datalink Authenticated!')
 end)
 --]]
 
 ```
 ```typescript
+import DatalinkModule from "@datalinkhq/rbx-datalink"
+
+const Datalink = new DatalinkModule({
+	datalinkUserAccountId = 0,
+	datalinkUserToken = ""
+})
+
+// Datalink.onAuthenticated.Once(() => {
+//    print('Datalink Authenticated!')
+// })
 
 ```
 </Code>
 
-<Callout type="error" emoji="">
-  Please ensure that the following are **NOT** exposed to the client;
+<Callout type="error" emoji="⚠️">
+  Please ensure that the following are **NOT** exposed to the client:
 
   - Authentication Key
     - This key would allow an attacker **FULL ACCESS** to your experiences data
